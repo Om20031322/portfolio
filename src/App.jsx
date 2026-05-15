@@ -7,8 +7,8 @@ const profile = {
   email: 'omjshah27052003@gmail.com',
   github: 'https://github.com/Om20031322',
   linkedin: 'https://www.linkedin.com/in/omshah272003/',
-  resume: '/Om-Shah-Resume.pdf',
-  photo: '/profile.jpg',
+  resume: `${import.meta.env.BASE_URL}Om-Shah-Resume.pdf`,
+  photo: `${import.meta.env.BASE_URL}profile.jpg`,
 };
 
 const navLinks = [
@@ -126,7 +126,7 @@ const certifications = [
     issuer: 'AWS Academy',
     issued: '09/27/2025',
     hours: '40 hours',
-    pdf: '/_Data_Engineering___Training_Badge.pdf',
+    pdf: `${import.meta.env.BASE_URL}_Data_Engineering___Training_Badge.pdf`,
     credly: 'https://www.credly.com/go/oqVuavMB',
     accent: 'Data Engineering',
   },
@@ -135,7 +135,7 @@ const certifications = [
     issuer: 'AWS Academy',
     issued: '11/19/2025',
     hours: '20 hours',
-    pdf: '/AWS_Machine_Learning__Training_Badge.pdf',
+    pdf: `${import.meta.env.BASE_URL}AWS_Machine_Learning__Training_Badge.pdf`,
     credly: 'https://www.credly.com/go/KXdGW7Wg',
     accent: 'Machine Learning',
   },
@@ -144,7 +144,7 @@ const certifications = [
     issuer: 'AWS Academy',
     issued: '11/30/2025',
     hours: '20 hours',
-    pdf: '/AWS_Machine_Learning_for_NLP.pdf',
+    pdf: `${import.meta.env.BASE_URL}AWS_Machine_Learning_for_NLP.pdf`,
     credly: 'https://www.credly.com/go/OWlIgyZ9',
     accent: 'NLP Systems',
   },
