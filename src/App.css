@@ -33,7 +33,7 @@ a {
 
 .site-shell {
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
   background:
     linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
@@ -46,7 +46,7 @@ a {
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,9 +54,9 @@ a {
   width: min(1180px, calc(100% - 40px));
   margin: 14px auto 0;
   padding: 11px 13px 11px 15px;
-  border: 1px solid rgba(219, 227, 239, 0.8);
+  border: 1px solid rgba(219, 227, 239, 0.82);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 16px 48px rgba(15, 23, 42, 0.09);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -156,6 +156,7 @@ a {
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
   padding: 82px 0;
+  scroll-margin-top: 96px;
 }
 
 .reveal {
@@ -719,9 +720,13 @@ a {
 
 .cert-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 .cert-card {
+  display: flex;
+  min-height: 430px;
+  flex-direction: column;
   overflow: hidden;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
@@ -796,7 +801,14 @@ a {
 }
 
 .cert-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 24px;
+}
+
+.cert-content {
+  flex: 1;
 }
 
 .cert-issuer {
@@ -834,25 +846,28 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .cert-actions a {
   display: inline-flex;
+  flex: 1 1 150px;
   align-items: center;
   justify-content: center;
   padding: 11px 14px;
+  border: 1px solid transparent;
   border-radius: 999px;
   font-size: 0.88rem;
   font-weight: 850;
+  text-align: center;
 }
 
-.cert-actions a:first-child {
+.cert-action-primary {
   background: var(--navy);
   color: #fff;
 }
 
-.cert-actions a:last-child {
+.cert-action-secondary {
   border: 1px solid var(--line);
   background: #fff;
   color: var(--blue-deep);
