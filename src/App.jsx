@@ -14,10 +14,10 @@ const profile = {
 
 const navLinks = [
   { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Certifications', href: '#certifications' },
-  { label: 'Experience', href: '#experience' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -367,6 +367,33 @@ export default function App() {
           </div>
         </section>
 
+        <section id="experience" className="section reveal">
+          <SectionHeading kicker="Experience" title="Professional experience">
+            Practical engineering work across backend platforms, microservices, cloud deployments,
+            automation, observability, and AI-enabled application features.
+          </SectionHeading>
+
+          <div className="timeline">
+            {experience.map((job) => (
+              <article className="timeline-card" key={`${job.company}-${job.period}`}>
+                <div className="timeline-dot" aria-hidden="true" />
+                <div className="timeline-header">
+                  <div>
+                    <h3>{job.role}</h3>
+                    <p>{job.company}</p>
+                  </div>
+                  <span>{job.period}</span>
+                </div>
+                <ul>
+                  {job.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section id="skills" className="section reveal">
           <SectionHeading kicker="Skills" title="Technical toolkit">
             A practical toolkit for scalable backend services, distributed systems, cloud-native
@@ -457,33 +484,6 @@ export default function App() {
                     </div>
                   )}
                 </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="experience" className="section reveal">
-          <SectionHeading kicker="Experience" title="Professional experience">
-            Practical engineering work across backend platforms, microservices, cloud deployments,
-            automation, observability, and AI-enabled application features.
-          </SectionHeading>
-
-          <div className="timeline">
-            {experience.map((job) => (
-              <article className="timeline-card" key={`${job.company}-${job.period}`}>
-                <div className="timeline-dot" aria-hidden="true" />
-                <div className="timeline-header">
-                  <div>
-                    <h3>{job.role}</h3>
-                    <p>{job.company}</p>
-                  </div>
-                  <span>{job.period}</span>
-                </div>
-                <ul>
-                  {job.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
               </article>
             ))}
           </div>
