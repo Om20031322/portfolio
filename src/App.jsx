@@ -3,8 +3,9 @@ import './App.css';
 const profile = {
   name: 'Om Shah',
   title: 'Software Engineer',
-  location: 'Arizona, USA',
-  email: 'om.s@itjobinbox.com',
+  location: 'Tempe, AZ (Open to Relocate)',
+  email: 'om.s@cvejobs.com',
+  phone: '+1 201-266-3858',
   github: 'https://github.com/Om20031322',
   linkedin: 'https://www.linkedin.com/in/omshah272003/',
   resume: `${import.meta.env.BASE_URL}Om-Shah-Resume.pdf`,
@@ -27,32 +28,37 @@ const skillGroups = [
   {
     title: 'Programming Languages',
     icon: '<>',
-    skills: ['Java', 'Python', 'SQL', 'JavaScript', 'Go', 'TypeScript'],
+    skills: ['Python', 'Java', 'C++', 'C#', 'JavaScript', 'SQL'],
   },
   {
-    title: 'Backend',
+    title: 'Backend Engineering',
     icon: '{}',
-    skills: ['Spring Boot', 'Spring MVC', 'Node.js', 'Express', 'FastAPI', 'REST APIs', 'SOAP', 'JSP', 'Servlets'],
+    skills: ['FastAPI', 'Django', 'Spring Boot', '.NET Core', 'REST APIs', 'gRPC', 'Microservices', 'API Design'],
   },
   {
-    title: 'Databases',
+    title: 'Databases & Caching',
     icon: 'DB',
-    skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Cassandra', 'Redis'],
+    skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'TimescaleDB', 'Pinecone', 'ChromaDB'],
   },
   {
     title: 'Cloud & DevOps',
     icon: 'CL',
-    skills: ['AWS', 'Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'CI/CD', 'CloudWatch'],
+    skills: ['AWS', 'EC2', 'S3', 'Lambda', 'EKS', 'SQS', 'Docker', 'Kubernetes', 'Terraform', 'Helm', 'GitHub Actions', 'CI/CD'],
   },
   {
-    title: 'AI & Data',
+    title: 'AI/ML',
     icon: 'AI',
-    skills: ['LLMs', 'RAG', 'Vector Embeddings', 'AI Inference Serving', 'ML Optimization', 'NLP', 'TensorFlow', 'scikit-learn'],
+    skills: ['LLMs', 'Retrieval-Augmented Generation (RAG)', 'LangChain', 'OpenAI API', 'Vector Databases', 'AI Agents', 'LangGraph', 'Embeddings', 'Semantic Search'],
   },
   {
-    title: 'Engineering',
+    title: 'Distributed Systems & Messaging',
+    icon: 'DS',
+    skills: ['Apache Kafka', 'Event-Driven Architecture', 'Asynchronous Processing', 'Distributed Systems'],
+  },
+  {
+    title: 'Software Quality & Observability',
     icon: 'SE',
-    skills: ['Microservices', 'Kafka', 'JWT', 'Spring Security', 'Testing', 'Observability', 'Prometheus', 'ELK'],
+    skills: ['Unit Testing', 'Integration Testing', 'Test Automation', 'Logging', 'Monitoring', 'Performance Tuning', 'Incident Triage'],
   },
 ];
 
@@ -60,16 +66,15 @@ const featuredSkills = new Set([
   'Java',
   'Python',
   'Spring Boot',
-  'Node.js',
   'FastAPI',
   'PostgreSQL',
   'AWS',
   'Docker',
   'Kubernetes',
   'LLMs',
-  'RAG',
+  'Retrieval-Augmented Generation (RAG)',
   'Microservices',
-  'Kafka',
+  'Apache Kafka',
 ]);
 
 const projects = [
@@ -79,7 +84,7 @@ const projects = [
     description:
       'Built a production-style AI-powered customer support platform integrating LLM-based conversational workflows, real-time messaging, and Kafka-driven event streaming across distributed services.',
     impact:
-      'Impact: Designed scalable microservices with Redis caching, PostgreSQL workflows, JWT authentication, and Kubernetes-ready deployment for reliable enterprise support operations.',
+      'Impact: Designed scalable microservices with Redis caching and PostgreSQL-backed workflows for concurrent enterprise support operations and low-latency communication. Implemented JWT-secured authentication and containerized Kubernetes deployments for scalability, fault tolerance, and deployment consistency.',
     tech: ['LLMs', 'Kafka', 'Redis', 'PostgreSQL', 'JWT', 'Docker', 'Kubernetes', 'Microservices'],
     link: 'https://github.com/Om20031322/ai-customer-support-system',
   },
@@ -89,8 +94,8 @@ const projects = [
     description:
       'Developed an LLM-powered semantic search engine using vector embeddings and Retrieval-Augmented Generation architecture for contextual enterprise question answering.',
     impact:
-      'Impact: Optimized retrieval and inference workflows to support high-concurrency search with fast response times across distributed backend services.',
-    tech: ['FastAPI', 'Python', 'RAG', 'Vector Embeddings', 'PostgreSQL', 'LLMs', 'Semantic Search'],
+      'Impact: Optimized inference and retrieval workflows to support 5K+ concurrent search requests with sub-500ms response latency across distributed backend services. Engineered FastAPI-based APIs for document retrieval, contextual ranking, and knowledge discovery, with MLflow-based model performance tracking.',
+    tech: ['FastAPI', 'Python', 'RAG', 'Vector Embeddings', 'LLMs', 'Semantic Search', 'MLflow'],
     link: 'https://github.com/Om20031322/llm-powered-semantic-search-engine',
   },
   {
@@ -99,7 +104,7 @@ const projects = [
     description:
       'Built a scalable full-stack e-commerce platform using React, FastAPI, PostgreSQL, and AWS with secure authentication, product catalog management, and real-time order workflows.',
     impact:
-      'Impact: Implemented Redis caching, asynchronous backend processing, Dockerized Kubernetes deployments, and CI/CD automation for reliable production-style delivery.',
+      'Impact: Engineered microservices-based backend APIs with Redis caching and asynchronous processing to improve transaction handling and API latency. Implemented Dockerized Kubernetes deployments and GitHub Actions CI/CD for zero-downtime releases and reliable production monitoring.',
     tech: ['React', 'FastAPI', 'PostgreSQL', 'AWS', 'Redis', 'Docker', 'Kubernetes', 'GitHub Actions'],
     link: 'https://github.com/Om20031322/cloud-native-fullstack-ecommerce-platform',
   },
@@ -151,40 +156,45 @@ const certifications = [
     pdf: `${import.meta.env.BASE_URL}AWS_Machine_Learning_for_NLP.pdf`,
     credly: 'https://www.credly.com/go/OWlIgyZ9',
   },
+  {
+    name: 'Python Programming',
+    category: 'Python Programming',
+    credentialType: 'Certification',
+  },
 ];
 
 const experience = [
   {
     role: 'Software Engineer',
-    company: 'ServiceNow',
+    company: 'Citigroup, AZ',
     period: 'Nov 2025 - Present',
     points: [
-      'Designed and shipped Java, Go, Spring Boot, and REST API-based microservices, reducing average request latency by 35%.',
-      'Built workflow automation and external integrations using Node.js and Express with reliable data-sync pipelines.',
-      'Refactored legacy services into Docker and Kubernetes-based deployments using CI/CD pipelines.',
-      'Created observability dashboards with CloudWatch, Prometheus, and ELK, reducing MTTR by 50%.',
-      'Developed secure authentication and authorization layers with Spring Security and role-based access control.',
-      'Tuned PostgreSQL and MongoDB queries with caching to improve throughput by 45%.',
+      'Designed and developed scalable backend systems and REST APIs using Python and Java for enterprise platforms, supporting 500K+ daily requests while improving platform reliability and request throughput.',
+      'Built high-throughput microservices using FastAPI, Docker, and Kubernetes, reducing p95 API response latency by 28% under high-concurrency workloads.',
+      'Designed scalable cloud-native services and distributed processing infrastructure supporting 1M+ asynchronous events per day while improving workload scalability and production reliability.',
+      'Implemented CI/CD pipelines with automated testing, deployment automation, monitoring, telemetry, and logging for production applications, reducing average deployment time by 40%.',
+      'Architected and integrated AI-powered services, including LLM and RAG capabilities, into five enterprise software platforms and business workflows.',
+      'Built scalable retrieval, caching, and data-access systems supporting 75K+ indexed documents using Redis, vector search, and distributed data-processing technologies, reducing p95 retrieval latency by 30%.',
     ],
   },
   {
     role: 'Software Engineer',
-    company: 'Infinite Infolab',
+    company: 'Infinite Infolab, India',
     period: 'Feb 2022 - Jul 2024',
     points: [
-      'Delivered full-stack applications using Java, Spring MVC, JavaScript, React.js, and REST APIs.',
-      'Built backend microservices for high-volume transactions using PostgreSQL and MySQL.',
-      'Created API integrations with Node.js, Express, and Flask across multiple third-party systems.',
-      'Supported migration from monolithic systems to cloud-native microservices with Dockerized deployments.',
-      'Built Jenkins CI pipelines to reduce deployment errors and improve release cycles.',
-      'Contributed to ML-driven features including preprocessing, model training, optimization, and AI inference serving.',
+      'Designed and developed scalable backend systems, REST APIs, and microservices in Python and Java, improving application performance, reliability, and p95 response time by 30%.',
+      'Built asynchronous data and document-ingestion pipelines using FastAPI and AWS Lambda, processing up to 10K documents per day for scalable processing and workflow automation.',
+      'Developed intelligent search, retrieval, and data-access capabilities across 500K+ indexed documents using Redis and vector databases, reducing average search latency by 25%.',
+      'Integrated frontend and backend services to support real-time workflows, API-driven applications, and automated document processing, reducing average workflow completion time by 25%.',
+      'Containerized and optimized microservices using Docker multi-stage builds, reducing container image size by 35% while improving deployment consistency, scalability, portability, and runtime efficiency.',
+      'Collaborated with cross-functional teams to deploy secure cloud-native applications with authentication, monitoring, logging, observability, and scalable infrastructure, reducing production incident investigation time by 20%.',
     ],
   },
 ];
 
 const education = [
   {
-    degree: 'Master, Information Technology',
+    degree: 'Master of Science, Information Technology',
     school: 'Arizona State University, USA',
     period: 'Aug 2024 - May 2026',
   },
@@ -277,13 +287,13 @@ export default function App() {
               Open to Software Engineer, Backend Engineer, Full Stack Engineer, and AI Software Engineer roles
             </p>
             <h1>
-              Hi, I&apos;m <span>Om Shah</span>. I build scalable backend, full-stack, and AI-powered
+              Hi, I&apos;m <span>Om Shah</span>. I build scalable backend, distributed, and AI-powered
               software systems.
             </h1>
             <p className="hero-intro">
-              Software Engineer with 3+ years of experience designing microservices, REST APIs,
-              cloud-native applications, CI/CD workflows, and AI-enabled platforms using Java, Python,
-              Node.js, React, AWS, Docker, and Kubernetes.
+              Software Engineer with 3+ years of experience building scalable backend systems,
+              distributed applications, cloud-native services, and AI-enabled enterprise platforms
+              using Python, Java, FastAPI, Spring Boot, AWS, Docker, and Kubernetes.
             </p>
 
             <div className="hero-actions">
@@ -308,8 +318,8 @@ export default function App() {
           <div className="hero-visual" aria-label="Profile photo and quick facts">
             <div className="photo-card">
               <img src={profile.photo} alt="Om Shah" />
-              <div className="photo-badge photo-badge-top">Software Engineer</div>
-              <div className="photo-badge photo-badge-bottom">Full Stack + AI</div>
+              <div className="photo-badge photo-badge-top">{profile.title}</div>
+              <div className="photo-badge photo-badge-bottom">Backend + Cloud + AI</div>
             </div>
             <div className="hero-stats">
               {profileHighlights.map((item) => (
@@ -324,8 +334,9 @@ export default function App() {
 
         <section id="about" className="section about-section reveal">
           <SectionHeading kicker="About" title="Software Engineer with backend, cloud, and AI focus">
-            Software Engineer with 3+ years of experience building scalable microservices, backend
-            systems, full-stack applications, cloud-native platforms, and AI-powered software solutions.
+            I build production systems supporting 500K+ daily requests and 1M+ asynchronous events
+            per day, with a focus on REST APIs, microservices, performance optimization, observability,
+            infrastructure automation, and data processing.
           </SectionHeading>
 
           <div className="about-grid">
@@ -333,25 +344,24 @@ export default function App() {
               <span className="card-number">01</span>
               <h3>Backend and microservices engineering</h3>
               <p>
-                I design and build reliable backend services, REST APIs, authentication flows, and
-                data-driven systems using Java, Python, Node.js, Spring Boot, and modern database
-                technologies.
+                I design and build scalable backend services, REST APIs, and distributed applications
+                using Python, Java, FastAPI, Spring Boot, and modern database and caching technologies.
               </p>
             </article>
             <article className="about-card">
               <span className="card-number">02</span>
               <h3>Cloud-native delivery</h3>
               <p>
-                I work with Docker, Kubernetes, AWS, Jenkins, and CI/CD pipelines to improve deployment
-                consistency, system reliability, and production readiness.
+                I work with AWS, Docker, Kubernetes, Terraform, Helm, GitHub Actions, and automated
+                testing to improve deployment consistency, system reliability, and production readiness.
               </p>
             </article>
             <article className="about-card">
               <span className="card-number">03</span>
               <h3>AI-enabled software systems</h3>
               <p>
-                I build AI-powered applications using LLM workflows, RAG, vector embeddings, semantic
-                search, and inference-focused backend APIs.
+                I integrate LLMs, RAG, vector search, and intelligent retrieval into production
+                software using LangChain, LangGraph, OpenAI API, embeddings, and AI agents.
               </p>
             </article>
           </div>
@@ -359,8 +369,8 @@ export default function App() {
 
         <section id="skills" className="section reveal">
           <SectionHeading kicker="Skills" title="Technical toolkit">
-            A practical toolkit for scalable backend services, full-stack applications, cloud-native
-            delivery, and AI-enabled software systems.
+            A practical toolkit for scalable backend services, distributed systems, cloud-native
+            delivery, observability, and AI-enabled software systems.
           </SectionHeading>
 
           <div className="skills-grid">
@@ -408,22 +418,22 @@ export default function App() {
         </section>
 
         <section id="certifications" className="section certifications-section reveal">
-          <SectionHeading kicker="Certifications" title="AWS Academy credentials">
-            Training badges that support my foundation in data engineering, machine learning, and natural
-            language processing for AI-focused software roles.
+          <SectionHeading kicker="Certifications" title="Certifications and training">
+            Credentials in Python programming, data engineering, machine learning, and natural language
+            processing that support my software engineering work.
           </SectionHeading>
 
           <div className="cert-grid">
             {certifications.map((cert) => (
               <article className="cert-card" key={cert.name}>
                 <div className="cert-preview" aria-label={`${cert.name} certification preview`}>
-                  <span>{cert.issuer}</span>
+                  {cert.issuer && <span>{cert.issuer}</span>}
                   <strong>{cert.category}</strong>
-                  <small>Graduate Badge</small>
+                  <small>{cert.credentialType || 'Graduate Badge'}</small>
                 </div>
                 <div className="cert-body">
                   <div className="cert-content">
-                    <p className="cert-issuer">{cert.issuer}</p>
+                    {cert.issuer && <p className="cert-issuer">{cert.issuer}</p>}
                     <h3>{cert.name}</h3>
                     {(cert.issued || cert.hours) && (
                       <div className="cert-meta">
@@ -517,6 +527,7 @@ export default function App() {
             <div className="contact-meta">
               <span>{profile.location}</span>
               <span>{profile.email}</span>
+              <span>{profile.phone}</span>
             </div>
           </div>
         </section>
